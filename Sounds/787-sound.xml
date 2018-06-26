@@ -8,7 +8,7 @@
 
 <engine>
   <name>left engine</name>
-  <path>Sounds/jet.wav</path>
+  <path>Sounds/idle.wav</path>
   <mode>looped</mode>
   <condition>
 	<equals>
@@ -33,9 +33,30 @@
   </position>
 </engine>
 
+    <engine>
+		<name>low l out</name>
+		<mode>looped</mode>
+		<path>Aircraft/787/Sounds/xlow.wav</path>
+		<property>engines/engine[0]/n1</property>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+		</condition>
+		<volume>
+			<property>engines/engine[0]/n1</property>
+			<factor>0.044</factor>
+			<max>1</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[0]/n1</property>
+			<offset>0</offset>
+			<factor>0.02</factor>
+			<max>2</max>
+		</pitch>
+	</engine>
+
 <engine>
   <name>left n1</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -71,7 +92,7 @@
 
 <engine>
   <name>right engine</name>
-  <path>Sounds/jet.wav</path>
+  <path>Sounds/idle.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -103,10 +124,30 @@
     <z>10.0</z>
   </position>
 </engine>
+        <engine>
+		<name>low r out</name>
+		<mode>looped</mode>
+		<path>Aircraft/777-300/Sounds/xlow.wav</path>
+		<property>engines/engine[1]/n1</property>
+		<condition>
+			<not><property>sim/current-view/internal</property></not>
+		</condition>
+		<volume>
+			<property>engines/engine[1]/n1</property>
+			<factor>0.044</factor>
+			<max>1</max>
+		</volume>
+		<pitch>
+			<property>engines/engine[1]/n1</property>
+			<offset>0</offset>
+			<factor>0.02</factor>
+			<max>2</max>
+		</pitch>
+	</engine>
 
 <engine>
   <name>right n1</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -144,7 +185,7 @@
 
 <engine>
   <name>APU n1</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -180,7 +221,7 @@
 
 <engine>
   <name>APU n1 inside</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -210,7 +251,7 @@
 
 <engine>
   <name>left engine inside</name>
-  <path>Sounds/jet.wav</path>
+  <path>Sounds/idle.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -245,7 +286,7 @@
 
 <engine>
   <name>left n1 inside</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -278,7 +319,7 @@
 
 <engine>
   <name>right engine inside</name>
-  <path>Sounds/jet.wav</path>
+  <path>Sounds/idle.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -312,7 +353,7 @@
 
 <engine>
   <name>right n1 inside</name>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <mode>looped</mode>
   <condition>
     <and>
@@ -738,7 +779,7 @@
 <speedbrake>
   <name>speedbrake</name>
   <mode>in-transit</mode>
-  <path>Sounds/whine.wav</path>
+  <path>Sounds/jet-trent1.wav</path>
   <condition>
     <and>
       <less-than>
